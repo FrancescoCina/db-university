@@ -34,6 +34,11 @@ WHERE `period` = 'I semestre' AND `year` = 1;
 
 --------------------------------------------
 
+-- 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020
+
+SELECT `id`, `hour`
+FROM `exams`
+WHERE HOUR(`hour`) > '13:59:59';
 
 
 
