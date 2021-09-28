@@ -73,6 +73,12 @@ GROUP BY `year_of_enrolment`;
 
 --------------------------------------------
 
+-- 10. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+SELECT COUNT(*) AS `n_teachers`, `office_address`
+FROM `teachers`
+GROUP BY `office_address`;
+
 --------------------------------------------
 
 --------------------------------------------
