@@ -25,10 +25,11 @@ ORDER BY `date_of_birth` DESC;
 --------------------------------------------
 
 
+-- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
 
-
-
-
+SELECT `name`,`id`,`period`,`year`
+FROM `courses`
+WHERE `period` = 'I semestre' AND `year` = 1;
 
 
 --------------------------------------------
