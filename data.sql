@@ -42,9 +42,15 @@ WHERE HOUR(`hour`) > '13:59:59';
 
 
 
-
-
 --------------------------------------------
+
+
+-- 6. Selezionare tutti i corsi di laurea magistrale
+SELECT `name`,`level` 
+FROM `degrees`
+WHERE `level` = 'magistrale'
+
+
 
 --------------------------------------------
 
