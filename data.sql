@@ -88,9 +88,11 @@ GROUP BY `n_appeal`;
 
 --------------------------------------------
 
---------------------------------------------
+-- 12. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
---------------------------------------------
+SELECT COUNT(`id`) AS `n_degree_courses`, `department_id` AS `department`
+FROM `degrees` 
+GROUP BY `department`
 
 --------------------------------------------
 
