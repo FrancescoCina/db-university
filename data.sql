@@ -45,7 +45,7 @@ WHERE HOUR(`hour`) > '13:59:59';
 -- 6. Selezionare tutti i corsi di laurea magistrale
 SELECT `name`,`level` 
 FROM `degrees`
-WHERE `level` = 'magistrale'
+WHERE `level` = 'magistrale';
 
 --------------------------------------------
 
@@ -92,7 +92,7 @@ GROUP BY `n_appeal`;
 
 SELECT COUNT(`id`) AS `n_degree_courses`, `department_id` AS `department`
 FROM `degrees` 
-GROUP BY `department`
+GROUP BY `department`;
 
 --------------------------------------------
 
