@@ -11,7 +11,7 @@ WHERE YEAR(`date_of_birth`) = 1990;
 
 SELECT `id`,`name`,`cfu`
 FROM `courses`
-WHERE `cfu` >= 10;
+WHERE `cfu` > 10;
 
 --------------------------------------------
 
@@ -36,9 +36,9 @@ WHERE `period` = 'I semestre' AND `year` = 1;
 
 -- 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020
 
-SELECT `id`, `hour`
-FROM `exams`
-WHERE HOUR(`hour`) > '13:59:59';
+SELECT `id`, `course_id`, `hour`, `date` 
+FROM `exams` 
+WHERE HOUR(`hour`) > '13:59:59' AND `date` = '2020-06-20'
 
 --------------------------------------------
 
@@ -65,7 +65,7 @@ WHERE `phone` IS NULL;
 --------------------------------------------
 
 -- 9. Contare quanti iscritti ci sono stati ogni anno
-
+ 
 SELECT COUNT(*) AS `number_of_students`, YEAR(`enrolment_date`) AS `year_of_enrolment`
 FROM `students` 
 GROUP BY `year_of_enrolment`;
